@@ -19,8 +19,8 @@ Rails.application.config.to_prepare do
 end
 
 Redmine::Plugin.register :auto_watchers do
-  name 'Auto Watchers Plugin'
-  author 'Tu Nombre'
+  name 'Auto Watchers Category Plugin'
+  author 'Moselan'
   description 'Asigna automáticamente seguidores basados en la categoría seleccionada'
   version '0.1.0'
   requires_redmine version_or_higher: '4.0.0'
