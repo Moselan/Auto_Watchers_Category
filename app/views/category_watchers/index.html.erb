@@ -1,0 +1,11 @@
+<h2>Configurar Seguidores por Categoría</h2>
+<%= form_tag category_watchers_path, method: :post do %>
+  <% Category.all.each do |category| %>
+    <h3><%= category.name %></h3>
+    <%= hidden_field_tag 'category_id', category.id %>
+    <%= collection_check_boxes(:user_ids, User.all, :id, :name) do |b| %>
+      <%= b.check_box %> <%= b.label %>
+    <% end %>
+  <% end %>
+  <%= submit_tag 'Guardar' %>
+<% end %>
